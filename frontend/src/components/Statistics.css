@@ -1,0 +1,160 @@
+.statistics-container {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.statistics-header h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.overall-progress {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress-label {
+  color: #cccccc;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.progress-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #61dafb, #21a0c4);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-number {
+  color: #ffffff;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.stat-label {
+  color: #cccccc;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.stat-sub {
+  color: #aaaaaa;
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+  .statistics-container {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .statistics-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .overall-progress {
+    justify-content: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+  }
+  
+  .stat-number {
+    font-size: 1.2em;
+  }
+  
+  .stat-label {
+    font-size: 0.8em;
+  }
+  
+  .stat-sub {
+    font-size: 0.7em;
+  }
+}
